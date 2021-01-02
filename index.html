@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan Matić</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+  * {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+
+  }
+
+  .primarnaBoja {
+    background-color: #303848;
+    color: white;
+  }
+
+  .sekundarnaBoja {
+    background-color: #f7b615;
+    color: white;
+  }
+
+  html {
+
+    height: 100%;
+    width: 100;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  #meni {
+
+    height: 100%;
+    position: fixed;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+
+  }
+
+  #meni .list-group {
+    color: black;
+    font-size: larger;
+  }
+
+  .sadrzaj {
+    width: 75%;
+    height: 100%;
+    float: right;
+    padding: 5%;
+    overflow-y: scroll;
+  }
+
+  #profilnaSlika {
+    height: auto;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* margin-left: 10%;*/
+    border: 1em solid #303848;
+  }
+
+  .card {
+    float: left;
+    height: auto;
+    border: solid #f7b615 2px;
+    width: 80%;
+    text-align: left;
+    margin: 20px;
+    margin-bottom: 8%;
+  }
+
+  .card:hover {
+    border: solid #f7b615 6px;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .carousel-item {
+    height: 550px;
+  }
+
+  .carousel {
+
+    height: 600px;
+  }
+
+  canvas {
+    display: block;
+
+  }
+
+  .btn {
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+  }
+  @media screen and (max-width: 600px) {
+    html{
+      overflow: scroll;
+    }
+    #meni{
+      position: relative;
+      width: 100%;
+      height: 100%; /*moze i auto*/
+    }
+   
+   h1{
+     font-size:20px;
+   }
+
+    .sadrzaj{
+      width: 100%;
+      height: auto;
+      padding-top: 0%;
+      
+    }
+}
+</style>
+<!--====================================MENI=============================================================-->
+
+<body style="height: 100%; width: 100%;">
+  <div id="meni" class="sekundarnaBoja px-3">
+
+    <img id="profilnaSlika" src="profilna.jpg">
+
+    <h1>Ivan Matić</h1>
+    <div class="list-group primarnaBoja" style="color: black;">
+      <a class="list-group-item list-group-item-action" href="#pocetna">Početna</a>
+      <a class="list-group-item list-group-item-action" href="#skills">Vještine</a>
+      <a class="list-group-item list-group-item-action" href="#projekti">Projekti</a>
+      <a class="list-group-item list-group-item-action" href="#kontakt">Kontakt</a>
+
+
+    </div>
+  </div>
+  <!--====================================POCETNA=============================================================-->
+  <div id="pocetna" class="sadrzaj primarnaBoja">
+    <h1 style="margin-top: 30%;">Ja sam Ivan Matić. Završio sam Srednju Elektrotehničku školu u Sarajevu, smjer
+      Elektrotehničar informatike i računarstva. Trenutno studiram na Fakultetu informacijskih tehnologija u
+      Mostaru. </h1>
+
+  </div>
+  <!--====================================SKILLS=============================================================-->
+  <div id="skills" class="sadrzaj primarnaBoja">
+    <table class="table-responsive" style="width: 100%;">
+      <tr>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">Web razvoj i dizajn</h4>
+              <ul>
+                <li>.Net Core</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">Poslovna inteligencija</h4>
+              <ul>
+                <li>Rad sa skladištem podataka</li>
+                <li>Multidimenzionalnim modelom podataka</li>
+                <li>Tabularnim modelom podataka</li>
+                <li>Izrada izvještaja</li>
+                <li>Excel (VBA)</li>
+                <li>PowerBI</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">Baze podataka</h4>
+              <ul>
+                <li>Osnove projektiranja baza podataka</li>
+                <li>Poznavanje MSSQL i MySQL baza podatka</li>
+                <li>pisanje SQL upita, procedura i trigera</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">C++</h4>
+              <ul>
+                <li>Koncepti objektno orijentiranog programiranja</li>
+                <li>Algoritmi sortiranja</li>
+                <li>Algoritni pretraživanja</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">Unified Modeling Language</h4>
+              <ul>
+                <li>Structure diagrams</li>
+                <li>Behavioral diagrams</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="card primarnaBoja">
+            <div class="card-body">
+              <h4 class="card-title">C#</h4>
+              <p>Trenutno učim C# za razvoj web aplikacija</p>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!--====================================Projekti=============================================================-->
+  <div id="projekti" class="sadrzaj primarnaBoja">
+    <h2>Projekti</h2>
+    <br>
+    <!----------------------------------------Nav pills--------------------------------------------->
+    <ul class="nav nav-pills" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="pill" href="#projekat1">Škola</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat2">Igrica</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat3">Videoteka</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat4">Kuhinja</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat5">Enkei</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat6">Iks Oks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#projekat7">Ostalo</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <!----------------------------Skola---------------------------------------------->
+      <div id="projekat1" class="container tab-pane active"><br>
+
+        <h3>Ticket System / Škola</h3>
+        </td>
+        <td><a class="btn btn-primary" href="https://github.com/IvanMatic-bit/Skola" target="_blank">GitHub
+            repostory</a></td>
+        </tr>
+
+        <div id="skolaSlike" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#skolaSlike" data-slide-to="0" class="active"></li>
+            <li data-target="#skolaSlike" data-slide-to="1"></li>
+            <li data-target="#skolaSlike" data-slide-to="2"></li>
+            <li data-target="#skolaSlike" data-slide-to="3"></li>
+            <li data-target="#skolaSlike" data-slide-to="4"></li>
+            <li data-target="#skolaSlike" data-slide-to="5"></li>
+            <li data-target="#skolaSlike" data-slide-to="6"></li>
+            <li data-target="#skolaSlike" data-slide-to="7"></li>
+          </ul>
+
+          <!-- The slideshow -->
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p>Za izradu ovog projekta koristio sam tehnologije PHP, HTML, CSS, JavaScript, jQuery, MySQL</p>
+              <p>Ovaj program je namijenjen za kreiranje i evidenciju zahtjeva. U ovom primjeru
+                namijenjen je za školu. Imamo 3 vrste korisnika (Administrator, Obični korisnik i korisnici sa
+                ulogama). Administratori vrše evidenciju
+                korisničkih računa i kreiraju nove. Obični korisnici mogu da šaju nove zahtjeve. Zahtjev sadrži
+                naslov, sadržaj i potrebno je
+                odabrati za koga je namijenjen. U bazu se još spremaju i ID korisnika koji je kreirao zahjtev i
+                vrijeme kreiranja. Korisnici sa ulogama
+                izvršavaju zadatake. Uloge su (IT support, domar i higijeničar). Nakon prijave korisnici sa ulogama
+                imaju pregled zahtjeva namjenjenih za njihovu ulogu.
+                Nakon izvršavanja zahtjev se prebacuje u tabelu arhiva, gdje se pored podataka o zahtjevu još dodaje i
+                datum i vrijeme izvršavanja i ID korisnika koji ga je izvršio.
+              </p>
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem1.JPG" alt="Slika 1" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem2.JPG" alt="Slika 2" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem3.JPG" alt="Slika 3" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem4.JPG" alt="Slika 4" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem5.JPG" alt="Slika 5" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem6.JPG" alt="Slika 6" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="ticketsystem7.JPG" alt="Slika 7" width="1100" height="500">
+            </div>
+
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#skolaSlike" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#skolaSlike" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <!---------------------------------IGRICA---------------------------------------------------------->
+      <div id="projekat2" class="container tab-pane fade"><br>
+        <h3>Blue game / Igrica</h3> <a class="btn btn-primary"
+          href="https://github.com/IvanMatic-bit/Web-razvoj-i-dizajn" target="_blank">GitHub repostory</a>
+        <a class="btn btn-primary" href="https://flamboyant-bartik-75b1c6.netlify.app" target="_blank">Započni
+          igricu</a>
+        <div id="igricaSlike" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#igricaSlike" data-slide-to="0" class="active"></li>
+            <li data-target="#igricaSlike" data-slide-to="1"></li>
+            <li data-target="#igricaSlike" data-slide-to="2"></li>
+            <li data-target="#igricaSlike" data-slide-to="3"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p>Za izradu ovog projekta koristio sam HTML, CSS, JavaScript i jQuery</p>
+              <p>Pravila igre: </p>
+              <p>Igrač mišem kontroliše svemirski brod koji putuje kroz. Izbjegava meteore i skuplja hranu. Hrana
+                donosi +20 poena, ako se pokupi u prvih 5 sekundi. Svako pet sekundi
+                broj poena koje se može pokupiti se smanjuje za 5. Minimalno donosi 5 poena. Svemirski brod poraste
+                svaki put kada se pokupi hrana. Kraj igre je kada svemirski brod dotakne meteor.
+              </p>
+            </div>
+            <div class="carousel-item">
+              <img src="igria1.JPG" alt="Slika 1" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="igrica2.JPG" alt="Slika 2" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="igrica3.JPG" alt="Slika 3" width="1100" height="500">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#igricaSlike" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#igricaSlike" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+      </div>
+      <!---kraj igrice-->
+    
+
+    <!-----------------------------------------------Videoteka----------------------------------->
+    <div id="projekat3" class="container tab-pane fade"><br>
+
+      <h3>Videoteka</h3>
+      </td>
+      <td><a class="btn btn-primary" href="https://github.com/IvanMatic-bit/Videoteka" target="_blank">GitHub
+          repostory</a></td>
+      </tr>
+
+      <div id="videotekaSlike" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#videotekaSlike" data-slide-to="0" class="active"></li>
+          <li data-target="#videotekaSlike" data-slide-to="1"></li>
+          <li data-target="#videotekaSlike" data-slide-to="2"></li>
+          <li data-target="#videotekaSlike" data-slide-to="3"></li>
+          <li data-target="#videotekaSlike" data-slide-to="4"></li>
+          <li data-target="#videotekaSlike" data-slide-to="5"></li>
+          <li data-target="#videotekaSlike" data-slide-to="6"></li>
+        </ul>
+
+        <!-- The slideshow -->
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>Za izradu ovog projekta koristio sam tehnologije PHP, HTML, CSS, JavaScript, jQuery, MySQL</p>
+            <p>Program za iznajmljivanje i kupovinu filmova i serija. Korisnik kreira novi korisnički račun i
+              prijavljuje se na sistem.
+              Nakon prijave na sistem korisnik ima opciju pregleda i pretraživanja filmova i serija. Na ovom
+              projektu je potrebno implementirati da korisnici/administratori imaju mogućnost dodavanja novih
+              filmova i serija.
+              U tabeli korisnik polje UserAdmin označava da li je korisnik administrator. Ukoliko jeste potrebno je
+              dodati funkcionalnost dodavanja novih filmova i serija.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka.JPG" alt="Slika 1" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka2.JPG" alt="Slika 2" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka3.JPG" alt="Slika 3" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka4.JPG" alt="Slika 4" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka5.JPG" alt="Slika 5" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="videoteka6.JPG" alt="Slika 6" width="1100" height="500">
+          </div>
+
+
+        </div>
+
+        <!-- Left and right controls  -->
+        <a class="carousel-control-prev" href="#videotekaSlike" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#videotekaSlike" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+    </div>
+    <!----------------------------------Kuhinja------------------------------------>
+    <div id="projekat4" class="container tab-pane fade"><br>
+      <h3>Kuhinja</h3><a class="btn btn-primary" href="https://github.com/IvanMatic-bit/kuhinjaThree.js"
+        target="_blank">GitHub repostory</a>
+      <p>Model kuhinje napravljen korištenjem three.js JavaScript biblioteke.</p>
+      <iframe src="PrvaScena.html" height="600px" width="800px"></iframe>
+    </div>
+    <!-------------------------------------------Enkei--------------------------------->
+    <div id="projekat5" class="container tab-pane fade"><br>
+      <h3>Enkei</h3>
+      </td>
+      <td><a class="btn btn-primary" href="https://github.com/IvanMatic-bit/Bootstrap" target="_blank">GitHub
+          repostory</a></td>
+      </tr>
+
+      <div id="enkeiSlike" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#enkeiSlike" data-slide-to="0" class="active"></li>
+          <li data-target="#enkeiSlike" data-slide-to="1"></li>
+          <li data-target="#enkeiSlike" data-slide-to="2"></li>
+          <li data-target="#enkeiSlike" data-slide-to="3"></li>
+          <li data-target="#enkeiSlike" data-slide-to="4"></li>
+          
+        </ul>
+
+        <!-- The slideshow -->
+
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="felge1.JPG" alt="Slika 1" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="felge2.JPG" alt="Slika 2" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="felge3.JPG" alt="Slika 3" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="felge4.JPG" alt="Slika 4" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="felge5.JPG" alt="Slika 5" width="1100" height="500">
+          </div>
+          
+
+        </div>
+
+        <!-- Left and right controls  -->
+        <a class="carousel-control-prev" href="#enkeiSlike" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#enkeiSlike" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      </div>
+
+      <!-----------------------------------Ostalo------------------------------------------->
+      <div id="projekat7" class="container tab-pane fade"><br>
+        <h3>Ostalo</h3>
+        <p>Linkovi sa predavanja i tutorijala. </p>
+        <ul class="list-group w-50" >
+  
+          <a class=" list-group-item btn btn-primary" href="https://github.com/IvanMatic-bit/SQL" target="_blank">./
+            SQL</a>
+  
+  
+          <a class="list-group-item btn btn-primary"
+            href="https://github.com/IvanMatic-bit/Algoritmi-i-strukture-podataka" target="_blank">./ Algoritmi i
+            strukture podataka</a>
+  
+          <a class="list-group-item btn btn-primary" href="https://github.com/IvanMatic-bit/PrezuimanjePodataka-PHP"
+            target="_blank">./ Preuzimanje podataka PHP</a>
+  
+          <a class="list-group-item btn btn-primary" href="https://github.com/IvanMatic-bit/WebShop" target="_blank">./
+            WebShop</a>
+  
+        </ul>
+      
+    </div>
+  
+    <!-----------------------------------------IKS OKS------------------------------>
+    <div id="projekat6" class="container tab-pane fade"><br>
+      <h3>Iks oks</h3>
+      </td>
+      <td><a class="btn btn-primary" href="https://github.com/IvanMatic-bit/document1" target="_blank">GitHub
+          repostory</a></td>
+      </tr>
+
+      <div id="iksoksSlike" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#iksoksSlike" data-slide-to="0" class="active"></li>
+          <li data-target="#iksoksSlike" data-slide-to="1"></li>
+          <li data-target="#iksoksSlike" data-slide-to="2"></li>
+          <li data-target="#iksoksSlike" data-slide-to="3"></li>
+         
+          
+        </ul>
+
+        <!-- The slideshow -->
+
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="iksoks1.JPG" alt="Slika 1" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="iksoks2.JPG" alt="Slika 2" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="iksoks3.JPG" alt="Slika 3" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="iksoks4.JPG" alt="Slika 4" width="1100" height="500">
+          </div>
+          
+          
+
+        </div>
+
+        <!-- Left and right controls  -->
+        <a class="carousel-control-prev" href="#iksoksSlike" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#iksoksSlike" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      
+  </div><!--kraj tabova-->
+  </div>
+  </div> <!-- kraj sadrzaja projekta-->
+
+
+<!--=========================================Kontakt==========================================================-->
+  <div id="kontakt" class="sadrzaj primarnaBoja">
+    <h1>Kontakt</h1>
+    <h2 style="margin-top: 100px;">Telefon</h2>
+    <ul>
+      <li>
+        <h3>062/914-326</h3>
+      </li>
+    </ul>
+
+    <h2 style="margin-top: 100px;">Email</h2>
+    <ul>
+      <li>
+        <h3>ivanmat97@gmail.com</h3>
+      </li>
+      <li>
+        <h3>ivan.matic@edu.fit.ba</h3>
+      </li>
+    </ul>
+
+
+  </div>
+  </div>
+</body>
+
+</html>
